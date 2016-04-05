@@ -10,7 +10,7 @@ goog = web.DataReader('GOOG', data_source = 'google', start='3/14/2009', end='4/
 
 # analytics
 goog['log_ret'] = np.log(goog.Close / goog.Close.shift(1))
-goog['volatility'] = pd.rolling_std(goog.log_ret, window=252) * np.sqrt(252)
+goog['volatility'] = pd.Series.rolling(goog.log_ret, window=252).std() * np.sqrt(252)
 
 # visualize
 goog[['Close', 'volatility']].plot(subplots = True, color='blue', figsize = (8,6))
