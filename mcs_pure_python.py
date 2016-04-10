@@ -8,7 +8,7 @@ from math import sqrt, exp, log
 from random import gauss, seed
 from __future__ import division
 
-seed(2000)
+seed(20000)
 t0 = time()
 
 # Parameters
