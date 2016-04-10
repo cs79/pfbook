@@ -26,7 +26,7 @@ def bsm_call_value(S0, K, T, r, sigma):
         present value of the European-style call option
     '''
     from math import log, sqrt, exp
-    from scipy import statistics
+    from scipy import stats
 
     S0 = float(S0)
     d1 = (log(S0 / K) + (r + 0.5 * sigma ** 2) * T) / (sigma * sqrt(T))
